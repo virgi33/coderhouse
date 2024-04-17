@@ -1,0 +1,139 @@
+@import "utilidades/variables";
+@import "utilidades/mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    #logo {
+        margin: 20px;
+    }
+
+    @include flex;
+    background: $color-principal;
+
+    nav {
+        .menu {
+            @include mediaqueries-tablet;
+            @include mediaqueries-cel;
+            @include flex;
+            padding: 20px;
+            margin: 20px;
+
+
+            li {
+                justify-content: space-between;
+
+                margin: 20px;
+
+                list-style: none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+                width: 100%;
+
+                font-size: larger;
+
+                font-weight: bold;
+
+                color: $color-secundario;
+
+                a {
+                    color: $color-secundario;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+}
+
+.main-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .parrafo-inicio {
+        $font-family:$fuente;
+        margin: 50px;
+    }
+
+    .imagen-inicio {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.titulo-equipos{
+    @include flex-center;
+
+    background: $color-secundario;
+    color: $color-letras;
+
+}
+.titulo-elegirnos{
+    @include flex-center;
+
+    background: $color-secundario;
+    color: $color-letras;
+
+}
+
+.titulo-tecontamos{
+    $font-family:$fuente;
+    @include flex-center;
+
+    background: $color-secundario;
+    color: $color-letras;
+}
+.titulo-contacto{
+    $font-family:$fuente;
+    @include flex-center;
+
+    background: $color-secundario;
+    color: $color-letras;
+
+}
+
+.equipos {
+    @include mediaqueries-cel;
+    @include mediaqueries-tablet;
+    @include flex;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.main-contacto {
+    div{
+        @include flex;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+ 
+.main-porque {
+    section {
+        @include flex;
+        margin-left: 20%;
+    }
+}
+
+footer {
+    img {
+        width: 80px;
+    }
+
+    background: $color-footer;
+    @include flex;
+    padding: 30px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
