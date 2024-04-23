@@ -21,3 +21,18 @@
     }
 }
 
+
+@mixin mediaqueries-cel-grid {   
+    @media screen and (max-width: 600px) {
+            display: grid;
+             grid-template-columns: 1fr ;
+           // grid-template-rows: 1fr 1fr 1fr ;
+    }
+}
+
+@mixin mediaqueries-tablet-grid {
+    @media screen and (max-width:1024px) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

@@ -119,11 +119,41 @@ header nav .menu li a {
   margin-bottom: 100px;
 }
 
-.main-porque section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20%;
+.main-porque {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  .main-porque {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main-porque {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-quienes section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 600px) {
+  .main-quienes section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main-quienes section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
