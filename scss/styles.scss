@@ -53,6 +53,7 @@ header {
 .main-inicio {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     @media screen and (max-width: 600px) {
         display: grid;
         grid-template-columns: 1fr;
@@ -60,7 +61,7 @@ header {
     }
 
     .parrafo-inicio {
-        $font-family:$fuente;
+        $font-family: $fuente;
         margin: 50px;
     }
 
@@ -70,14 +71,7 @@ header {
     }
 }
 
-.titulo-equipos{
-    @include flex-center;
-
-    background: $color-secundario;
-    color: $color-letras;
-
-}
-.titulo-elegirnos{
+.titulo-equipos {
     @include flex-center;
 
     background: $color-secundario;
@@ -85,15 +79,24 @@ header {
 
 }
 
-.titulo-tecontamos{
-    $font-family:$fuente;
+.titulo-elegirnos {
+    @include flex-center;
+
+    background: $color-secundario;
+    color: $color-letras;
+
+}
+
+.titulo-tecontamos {
+    $font-family: $fuente;
     @include flex-center;
 
     background: $color-secundario;
     color: $color-letras;
 }
-.titulo-contacto{
-    $font-family:$fuente;
+
+.titulo-contacto {
+    $font-family: $fuente;
     @include flex-center;
 
     background: $color-secundario;
@@ -108,39 +111,52 @@ header {
     margin: 10px;
     padding: 10px;
 
+    .btn-primary {
+        background: $color-principal;
+        color: $color-letras;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-letras;
+        font-family: $fuente;
+        font-weight: bold;
+        border: none;
+
+    }
 }
 
+
 .main-contacto {
-    div{
+    div {
         @include flex;
         flex-direction: column;
         margin-top: 100px;
         margin-bottom: 100px;
     }
 }
- 
+
 .main-porque {
-    
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        padding: 20px;
-        @include mediaqueries-cel-grid;
-        @include mediaqueries-tablet-grid;
-        
-        
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    @include mediaqueries-cel-grid;
+    @include mediaqueries-tablet-grid;
+
+
 }
 
 .main-quienes {
     section {
         display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr ;
-    @include mediaqueries-cel-grid;
-    @include mediaqueries-tablet-grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        @include mediaqueries-cel-grid;
+        @include mediaqueries-tablet-grid;
 
     }
-   
+
 
 }
 
