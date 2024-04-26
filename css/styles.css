@@ -5,10 +5,12 @@
 }
 
 header {
+  background: #cc2b5e;
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+  background: linear-gradient(to right, #753a88, #cc2b5e);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(184, 91, 122);
 }
 header #logo {
   margin: 20px;
