@@ -59,11 +59,53 @@ header nav .menu li a {
   }
 }
 .main-inicio .parrafo-inicio {
-  margin: 50px;
+  margin: 15px;
+}
+.main-inicio .parrafo-inicio .titulo-inicio {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #753a88;
+  font-size: 2, 5rem;
+}
+.main-inicio .parrafo-inicio .superposicion-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-inicio .parrafo-inicio .superposicion-main .texto-inicio {
+  width: 450px;
+  position: absolute;
+  z-index: 1;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #753a88;
+  font-size: larger;
+  line-height: 3rem;
+}
+@media screen and (max-width: 1024px) {
+  .main-inicio .parrafo-inicio .superposicion-main .texto-inicio {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+  }
+}
+.main-inicio .parrafo-inicio .superposicion-main .imagen-publicidad {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 .main-inicio .imagen-inicio {
+  display: flex;
+  overflow: hidden;
+  flex: 1;
   width: 100%;
-  margin: auto;
+  height: 100%;
+  padding: 5px;
 }
 
 .titulo-equipos {
@@ -170,7 +212,7 @@ header nav .menu li a {
 }
 
 footer {
-  background: rgb(126, 48, 126);
+  background: #753a88;
   display: flex;
   justify-content: space-between;
   align-items: center;
