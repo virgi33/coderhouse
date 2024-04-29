@@ -8,16 +8,17 @@
 }
 
 header {
-    
-background: #cc2b5e; 
-background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  
-background: linear-gradient(to right, #753a88, #cc2b5e);
+
+    background: #cc2b5e;
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+    background: linear-gradient(to right, #753a88, #cc2b5e);
+
     #logo {
         margin: 20px;
     }
 
     @include flex;
- 
+
 
     nav {
         .menu {
@@ -63,48 +64,52 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
-   
+
     .parrafo-inicio {
         $font-family: $fuente;
         margin: 15px;
-            .titulo-inicio{
+
+        .titulo-inicio {
             @include flex-center;
             text-align: center;
             align-items: center;
             font-family: $fuente;
             color: $color-footer;
-            font-size: 2,5rem;
+            font-size: 2, 5rem;
+        }
+
+        .superposicion-main {
+            @include flex-center;
+            align-items: center;
+
+            .texto-inicio {
+                width: 450px;
+                position: absolute;
+                z-index: 1;
+                font-family: $fuente;
+                color: $color-footer;
+                font-size: larger;
+                line-height: 3rem;
+
+                @media screen and (max-width:1024px) {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    padding: 30px;
+                }
             }
-            .superposicion-main {
-                @include flex-center;
-                align-items: center;
-                .texto-inicio{
-                    width: 450px;
-                    position: absolute;
-                    z-index: 1;
-                    font-family: $fuente;
-                    color: $color-footer;
-                    font-size: larger;
-                    line-height: 3rem;
-                    
-                    @media screen and (max-width:1024px) {
-                        width: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-content: center;
-                        padding: 30px;
-                    }
-                }
-                .imagen-publicidad {
-                    position: relative;
-                    z-index: 0;
-                    width: 100%;
-                    height: 100%;
-                    
-                }
+
+            .imagen-publicidad {
+                position: relative;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
 
             }
-        
+
+        }
+
     }
 
     .imagen-inicio {
@@ -113,14 +118,15 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
         flex: 1;
         width: 100%;
         height: 100%;
-        padding: 5px;;
-        
+        padding: 5px;
+        ;
+
     }
 }
 
 .titulo-equipos {
     @include flex-center;
-
+    font-family: $fuente;
     background: $color-secundario;
     color: $color-letras;
 
@@ -128,6 +134,7 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
 
 .titulo-elegirnos {
     @include flex-center;
+    font-family: $fuente;
 
     background: $color-secundario;
     color: $color-letras;
@@ -135,7 +142,8 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
 }
 
 .titulo-tecontamos {
-    $font-family: $fuente;
+    font-family: $fuente;
+
     @include flex-center;
 
     background: $color-secundario;
@@ -143,7 +151,7 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
 }
 
 .titulo-contacto {
-    $font-family: $fuente;
+    font-family: $fuente;
     @include flex-center;
 
     background: $color-secundario;
@@ -158,18 +166,40 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
     margin: 10px;
     padding: 10px;
 
-    .btn-primary {
-        background: $color-principal;
-        color: $color-letras;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $color-letras;
-        font-family: $fuente;
-        font-weight: bold;
-        border: none;
+    .card {
 
+        width: 18rem;
+     
+        .imagenes {
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .card-img-top {
+                max-height: 100%;
+                width: fit-content;
+            }
+
+        }
+        .card-body {
+            height: 200px;
+            .btn-primary {
+                background: $color-principal;
+                color: $color-letras;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-letras;
+                font-family: $fuente;
+                font-weight: bold;
+                border: none;
+    
+            }
+        }
     }
+
+
 }
 
 
@@ -206,8 +236,6 @@ background: linear-gradient(to right, #753a88, #cc2b5e);
 
 
 }
-
-
 footer {
     img {
         width: 80px;

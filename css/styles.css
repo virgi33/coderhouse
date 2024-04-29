@@ -40,10 +40,10 @@ header nav .menu li {
   width: 100%;
   font-size: larger;
   font-weight: bold;
-  color: rgb(255, 192, 203);
+  color: rgb(243, 151, 166);
 }
 header nav .menu li a {
-  color: rgb(255, 192, 203);
+  color: rgb(243, 151, 166);
   text-decoration: none;
 }
 
@@ -111,28 +111,32 @@ header nav .menu li a {
 .titulo-equipos {
   display: flex;
   justify-content: center;
-  background: rgb(255, 192, 203);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: rgb(243, 151, 166);
   color: beige;
 }
 
 .titulo-elegirnos {
   display: flex;
   justify-content: center;
-  background: rgb(255, 192, 203);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: rgb(243, 151, 166);
   color: beige;
 }
 
 .titulo-tecontamos {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
-  background: rgb(255, 192, 203);
+  background: rgb(243, 151, 166);
   color: beige;
 }
 
 .titulo-contacto {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
-  background: rgb(255, 192, 203);
+  background: rgb(243, 151, 166);
   color: beige;
 }
 
@@ -153,8 +157,24 @@ header nav .menu li a {
     flex-direction: column;
   }
 }
-.equipos .btn-primary {
-  background: rgb(184, 91, 122);
+.equipos .card {
+  width: 18rem;
+}
+.equipos .card .imagenes {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.equipos .card .imagenes .card-img-top {
+  max-height: 100%;
+  width: fit-content;
+}
+.equipos .card .card-body {
+  height: 200px;
+}
+.equipos .card .card-body .btn-primary {
+  background: #cc2b5e;
   color: beige;
   display: flex;
   justify-content: center;
