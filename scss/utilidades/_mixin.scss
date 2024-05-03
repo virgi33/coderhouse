@@ -12,12 +12,14 @@
 @mixin mediaqueries-cel {   
     @media screen and (max-width: 600px) {
             flex-direction: column;
+           
     }
 }
 
 @mixin mediaqueries-tablet {
     @media screen and (max-width:1024px) {
         flex-direction: column;
+        
     }
 }
 
@@ -25,8 +27,7 @@
 @mixin mediaqueries-cel-grid {   
     @media screen and (max-width: 600px) {
             display: grid;
-             grid-template-columns: 1fr ;
-           
+             grid-template-columns: 1fr ;      
     }
 }
 
@@ -36,6 +37,16 @@
         grid-template-columns: 1fr;
     }
 }
+@mixin botones {
+    background: $color-principal;
+    color: $color-letras;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-letras;
+    font-family: $fuente;
+    font-weight: bold;
+    border: none;
+}
 
 
-//box-shadow: 10px 10px 5px $color-principal;

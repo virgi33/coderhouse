@@ -158,7 +158,18 @@ header nav .menu li a {
   }
 }
 .equipos .card {
-  width: 18rem;
+  width: 20rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 600px) {
+  .equipos .card {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .equipos .card {
+    margin: 15px;
+  }
 }
 .equipos .card .imagenes {
   height: 250px;
@@ -173,6 +184,17 @@ header nav .menu li a {
 .equipos .card .card-body {
   height: 200px;
 }
+.equipos .card .card-body h5 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #cc2b5e;
+  font-size: larger;
+}
+.equipos .card .card-body p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #cc2b5e;
+  font-size: medium;
+}
 .equipos .card .card-body .btn-primary {
   background: #cc2b5e;
   color: beige;
@@ -185,13 +207,49 @@ header nav .menu li a {
   border: none;
 }
 
-.main-contacto div {
+.main-contacto .input-contacto {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 100px;
+}
+.main-contacto .input-contacto input {
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+.main-contacto .input-contacto textarea {
+  height: 100px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.main-contacto .input-contacto button {
+  background: #cc2b5e;
+  color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.main-contacto .input-contacto button:hover {
+  border: 2px solid rgb(243, 151, 166);
+}
+.main-contacto .input-contacto button:active {
+  background-color: #753a88;
 }
 
 .main-porque {
@@ -212,7 +270,46 @@ header nav .menu li a {
     grid-template-columns: 1fr;
   }
 }
+.main-porque .ventajas {
+  justify-self: center;
+  align-self: center;
+  width: 15rem;
+  height: 300px;
+}
+.main-porque .ventajas p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #cc2b5e;
+  font-size: large;
+  text-align: center;
+}
+.main-porque .imagenes-ventajas {
+  height: 150px;
+  text-align: center;
+}
+.main-porque .imagenes-ventajas img {
+  justify-self: center;
+  align-self: center;
+  max-height: 100%;
+  width: fit-content;
+}
 
+.main-quienes {
+  background: #cc2b5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #753a88, #cc2b5e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-quienes p {
+  color: beige;
+  font-size: larger;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  white-space: break-word;
+}
 .main-quienes section {
   display: grid;
   grid-template-rows: 1fr;
@@ -229,6 +326,13 @@ header nav .menu li a {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+.main-quienes section .imagen-clinica {
+  height: 350px;
+}
+.main-quienes section .imagen-clinica img {
+  max-height: 100%;
+  width: fit-content;
 }
 
 footer {

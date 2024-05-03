@@ -163,13 +163,21 @@ header {
     @include mediaqueries-cel;
     @include mediaqueries-tablet;
     @include flex;
+      
     margin: 10px;
     padding: 10px;
 
     .card {
-
-        width: 18rem;
-     
+        @media screen and (max-width: 600px) {
+            margin: 20px;
+        }
+         
+        @media screen and (max-width:1024px) {
+                margin:15px;
+        }
+        width: 20rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+       
         .imagenes {
             height: 250px;
             display: flex;
@@ -183,18 +191,23 @@ header {
 
         }
         .card-body {
+        
             height: 200px;
-            .btn-primary {
-                background: $color-principal;
-                color: $color-letras;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $color-letras;
+            h5 {
+                text-align: center;
                 font-family: $fuente;
-                font-weight: bold;
-                border: none;
-    
+                color: $color-principal;
+                font-size: larger;
+            }
+            p {
+                font-family: $fuente;
+                color:$color-principal;
+                font-size:medium;
+               
+                
+            }
+            .btn-primary {
+               @include botones;
             }
         }
     }
@@ -204,38 +217,128 @@ header {
 
 
 .main-contacto {
-    div {
+    .input-contacto {
         @include flex;
         flex-direction: column;
         margin-top: 100px;
-        margin-bottom: 100px;
+        margin-bottom: 100px;   
+       input {
+        
+        height: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 5px;
+       }
+       textarea {
+        height: 100px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        font-family: $fuente;
+
     }
+        button {
+        @include botones;
+        width: 150px;
+        height: 30px;
+        border-radius: 3px;
+        cursor: pointer;
+        
+        transition: background-color 0.3s ease;
+        
+    }
+    button:hover {
+        border: 2px solid $color-secundario; 
+        
+        
+    }
+    button:active {
+        
+        background-color: $color-footer; 
+    }
+   
+    }   
 }
 
 .main-porque {
-
     display: grid;
+  
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
     @include mediaqueries-cel-grid;
     @include mediaqueries-tablet-grid;
+   
 
+        .ventajas{
+            justify-self: center;
+           align-self: center;
+            width: 15rem;
+            height: 300px;
+            p {
+                font-family: $fuente;
+                color: $color-principal;
+                font-size: large;
+                text-align: center;
+            }
+            
+        }
+        .imagenes-ventajas{
+            height: 150px;
+            text-align: center;
+           
+            img {
+                justify-self: center;
+                align-self: center;
+                max-height:100% ;
+                width: fit-content;
+              // width: 300px;
+              // height: 300px;
+              // object-fit: cover;
 
+            }
+        }
+        
 }
 
 .main-quienes {
+    background: #cc2b5e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p { 
+        color: $color-letras;
+        font-size: larger;
+       font-family: $fuente;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        white-space: break-word;
+    }
     section {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
         @include mediaqueries-cel-grid;
         @include mediaqueries-tablet-grid;
-
+            .imagen-clinica {
+                height: 350px;
+               img {
+                max-height:100% ;
+                width: fit-content;
+               }
+                
+            }
     }
-
-
+     
 }
+
+
+
+
 footer {
     img {
         width: 80px;
