@@ -5,12 +5,17 @@
 }
 
 header {
-  background: #cc2b5e;
-  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
-  background: linear-gradient(to right, #753a88, #cc2b5e);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #cc2b5e;
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+  background: linear-gradient(to right, #753a88, #cc2b5e);
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
 }
 header #logo {
   margin: 20px;
@@ -91,6 +96,12 @@ header nav .menu li a {
     justify-content: center;
     align-content: center;
     padding: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-inicio .parrafo-inicio .superposicion-main .texto-inicio {
+    line-height: 1.5rem;
+    width: 70%;
   }
 }
 .main-inicio .parrafo-inicio .superposicion-main .imagen-publicidad {
@@ -340,9 +351,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
   padding: 30px;
-  padding-left: 25%;
-  padding-right: 25%;
 }
 footer img {
   width: 80px;

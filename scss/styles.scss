@@ -9,6 +9,9 @@
 
 header {
 
+    @include flex;
+    @include mediaqueries-cel;
+
     background: #cc2b5e;
     background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
     background: linear-gradient(to right, #753a88, #cc2b5e);
@@ -17,7 +20,6 @@ header {
         margin: 20px;
     }
 
-    @include flex;
 
 
     nav {
@@ -91,12 +93,19 @@ header {
                 font-size: larger;
                 line-height: 3rem;
 
+
                 @media screen and (max-width:1024px) {
                     width: 50%;
                     display: flex;
                     justify-content: center;
                     align-content: center;
                     padding: 30px;
+                }
+
+                @media screen and (max-width:400px) {
+                    line-height: 1.5rem;
+                    width: 70%;
+
                 }
             }
 
@@ -163,7 +172,7 @@ header {
     @include mediaqueries-cel;
     @include mediaqueries-tablet;
     @include flex;
-      
+
     margin: 10px;
     padding: 10px;
 
@@ -171,13 +180,14 @@ header {
         @media screen and (max-width: 600px) {
             margin: 20px;
         }
-         
+
         @media screen and (max-width:1024px) {
-                margin:15px;
+            margin: 15px;
         }
+
         width: 20rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-       
+
         .imagenes {
             height: 250px;
             display: flex;
@@ -190,24 +200,28 @@ header {
             }
 
         }
+
         .card-body {
-        
+
             height: 200px;
+
             h5 {
                 text-align: center;
                 font-family: $fuente;
                 color: $color-principal;
                 font-size: larger;
             }
+
             p {
                 font-family: $fuente;
-                color:$color-principal;
-                font-size:medium;
-               
-                
+                color: $color-principal;
+                font-size: medium;
+
+
             }
+
             .btn-primary {
-               @include botones;
+                @include botones;
             }
         }
     }
@@ -221,125 +235,137 @@ header {
         @include flex;
         flex-direction: column;
         margin-top: 100px;
-        margin-bottom: 100px;   
-       input {
-        
-        height: 40px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        padding: 5px;
-       }
-       textarea {
-        height: 100px;
-        width: 200px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-        padding: 15px;
-        font-family: $fuente;
+        margin-bottom: 100px;
+
+        input {
+
+            height: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            font-family: $fuente;
+
+        }
+
+        button {
+            @include botones;
+            width: 150px;
+            height: 30px;
+            border-radius: 3px;
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+
+        }
+
+        button:hover {
+            border: 2px solid $color-secundario;
+
+
+        }
+
+        button:active {
+
+            background-color: $color-footer;
+        }
 
     }
-        button {
-        @include botones;
-        width: 150px;
-        height: 30px;
-        border-radius: 3px;
-        cursor: pointer;
-        
-        transition: background-color 0.3s ease;
-        
-    }
-    button:hover {
-        border: 2px solid $color-secundario; 
-        
-        
-    }
-    button:active {
-        
-        background-color: $color-footer; 
-    }
-   
-    }   
 }
 
 .main-porque {
     display: grid;
-  
+
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
     @include mediaqueries-cel-grid;
     @include mediaqueries-tablet-grid;
-   
 
-        .ventajas{
-            justify-self: center;
-           align-self: center;
-            width: 15rem;
-            height: 300px;
-            p {
-                font-family: $fuente;
-                color: $color-principal;
-                font-size: large;
-                text-align: center;
-            }
-            
-        }
-        .imagenes-ventajas{
-            height: 150px;
+
+    .ventajas {
+        justify-self: center;
+        align-self: center;
+        width: 15rem;
+        height: 300px;
+
+        p {
+            font-family: $fuente;
+            color: $color-principal;
+            font-size: large;
             text-align: center;
-           
-            img {
-                justify-self: center;
-                align-self: center;
-                max-height:100% ;
-                width: fit-content;
-
-            }
         }
-        
+
+    }
+
+    .imagenes-ventajas {
+        height: 150px;
+        text-align: center;
+
+        img {
+            justify-self: center;
+            align-self: center;
+            max-height: 100%;
+            width: fit-content;
+
+        }
+    }
+
 }
 
 .main-quienes {
-    background: #cc2b5e; 
-    background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  
-    background: linear-gradient(to top, #753a88, #cc2b5e); 
+    background: #cc2b5e;
+    background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);
+    background: linear-gradient(to top, #753a88, #cc2b5e);
     display: flex;
     justify-content: center;
     align-items: center;
-    p { 
+
+    p {
         color: $color-letras;
         font-size: larger;
-       font-family: $fuente;
+        font-family: $fuente;
         text-align: center;
         justify-self: center;
         align-self: center;
         white-space: break-word;
     }
+
     section {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
         @include mediaqueries-cel-grid;
         @include mediaqueries-tablet-grid;
-            .imagen-clinica {
-                height: 350px;
-               img {
-                max-height:100% ;
+
+        .imagen-clinica {
+            height: 350px;
+
+            img {
+                max-height: 100%;
                 width: fit-content;
-               }
-                
             }
+
+        }
     }
-     
+
 }
 
 footer {
     img {
         width: 80px;
     }
+
     background: $color-footer;
     @include flex;
+    justify-content: space-around;
     padding: 30px;
-    padding-left: 25%;
-    padding-right: 25%;
+
 }
